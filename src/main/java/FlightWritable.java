@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class FlightWritable {
+public class FlightWritable {
 }
