@@ -17,6 +17,7 @@ public class TextPair {
             return (key.hashCode() & Integer.MAX_VALUE) % numReduceTasks;
         }
     }
+
     public class FirstComparator implements RawComparator {
         @Override
         public int compare(Object o1, Object o2) {
