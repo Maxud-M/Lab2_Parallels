@@ -1,10 +1,12 @@
 package ru.evistix28.parallels;
 
 import org.apache.hadoop.io.RawComparator;
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.file.tfile.RawComparable;
 import org.apache.hadoop.mapreduce.Partitioner;
 
 public class TextPair {
+
     public class FirstPartitioner extends Partitioner {
         @Override
         public int getPartition(Object o, Object o2, int i) {

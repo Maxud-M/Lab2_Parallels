@@ -15,8 +15,8 @@ public class Main {
         Job job = Job.getInstance();
         job.setJarByClass(Main.class);
         job.setJobName("JoinJob sort");
-        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, CallsJoinMapper.class);
-        MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, SystemsJoinMapper.class);
+        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, FlightsJoinMapper.class);
+        MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, AirPortsJoinMapper.class);
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setPartitionerClass(TextPair.FirstPartitioner.class);
         job.setGroupingComparatorClass(TextPair.FirstComparator.class);
