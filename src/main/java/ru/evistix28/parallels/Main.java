@@ -1,4 +1,4 @@
-package ru.evistix28.paral
+package ru.evistix28.parallels;
 
 
 import org.apache.hadoop.fs.Path;

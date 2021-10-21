@@ -1,3 +1,4 @@
+package ru.evistix28.parallels;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
