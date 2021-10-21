@@ -7,6 +7,10 @@ import org.apache.hadoop.mapreduce.Partitioner;
 
 public class TextPair {
 
+    static int AEROPORT_ID;
+    static int 
+
+
     public class FirstPartitioner extends Partitioner {
         @Override
         public int getPartition(Object o, Object o2, int i) {
