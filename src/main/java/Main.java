@@ -1,3 +1,6 @@
+package ru.evistix28.paral
+
+
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
