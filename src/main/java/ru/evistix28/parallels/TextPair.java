@@ -3,6 +3,7 @@ package ru.evistix28.parallels;
 import org.apache.hadoop.io.RawComparator;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.WritableComparable;
+import org.apache.hadoop.io.WritableComparator;
 import org.apache.hadoop.io.file.tfile.RawComparable;
 import org.apache.hadoop.mapreduce.Partitioner;
 
@@ -44,7 +45,7 @@ public class TextPair implements WritableComparable<TextPair> {
         }
     }
 
-    public class FirstComparator implements RawComparator<TextPair> {
+    public class FirstComparator extends WritableComparator {
 
 
         public int compare(TextPair a, TextPair b) {
@@ -60,9 +61,5 @@ public class TextPair implements WritableComparable<TextPair> {
             return false;
         }
 
-        @Override
-        public int compare(byte[] bytes, int i, int i1, byte[] bytes1, int i2, int i3) {
-            return 0;
-        }
     }
 }
