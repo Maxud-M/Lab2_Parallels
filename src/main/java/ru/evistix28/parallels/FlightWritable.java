@@ -8,6 +8,7 @@ import java.io.IOException;
 
 public class FlightWritable implements Writable {
 
+
     @Override
     public void write(DataOutput dataOutput) throws IOException {
 
