@@ -12,19 +12,21 @@ import java.io.IOException;
 
 public class TextPair implements WritableComparable<TextPair> {
 
-    int AeroportId;
+    int aeroportId;
     int dataType;
 
 
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        
+        dataOutput.writeInt(aeroportId);
+        dataOutput.writeInt(dataType);
 
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
+        dataInput.readInt();
 
     }
 
