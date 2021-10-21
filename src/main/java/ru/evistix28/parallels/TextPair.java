@@ -20,7 +20,7 @@ public class TextPair {
 
     public class FirstComparator implements RawComparator {
         @Override
-        public int compare(Object o1, Object o2) {
+        public int compare(Obje ct o1, Object o2) {
             return 0;
         }
 
