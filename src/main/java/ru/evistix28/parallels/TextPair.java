@@ -7,8 +7,8 @@ import org.apache.hadoop.mapreduce.Partitioner;
 
 public class TextPair {
 
-    static int AEROPORT_ID;
-    static int 
+    static int AeroportId;
+    static int typeData;
 
 
     public class FirstPartitioner extends Partitioner {
