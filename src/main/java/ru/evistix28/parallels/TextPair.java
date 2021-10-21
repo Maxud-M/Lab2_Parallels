@@ -22,7 +22,7 @@ public class TextPair {
 
 
         public int compare(TextPairComparable a, TextPairComparable b) {
-            return 0;
+            return a.compareTo(b);
         }
 
         @Override
