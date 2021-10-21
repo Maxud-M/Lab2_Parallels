@@ -53,6 +53,10 @@ public class TextPair implements WritableComparable<TextPair> {
 
         @Override
         public boolean equals(Object obj) {
+            if (obj instanceof TextPair) {
+                TextPair tp = (TextPair) obj;
+                return aeroportId == tp.aeroportId && dataType == tp.dataType;
+            }
             return false;
         }
 
