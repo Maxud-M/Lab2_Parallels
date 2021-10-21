@@ -11,7 +11,7 @@ public class TextPair {
     static int dataType;
 
 
-    public class FirstPartitioner<TextPair, > extends Partitioner<,> {
+    public class FirstPartitioner<TextPair, Text> extends Partitioner<TextPair, Text> {
         @Override
         public int getPartition(Object o, Object o2, int i) {
             return 0;
