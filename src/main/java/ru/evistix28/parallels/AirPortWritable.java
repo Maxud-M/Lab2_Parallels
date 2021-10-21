@@ -9,7 +9,7 @@ import java.io.IOException;
 public class AirPortWritable implements Writable {
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-
+        data
     }
 
     @Override
