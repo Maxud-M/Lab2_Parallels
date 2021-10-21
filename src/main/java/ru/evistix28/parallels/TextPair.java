@@ -12,13 +12,10 @@ import java.io.IOException;
 
 public class TextPair implements WritableComparable<TextPair> {
 
-    static int AeroportId;
-    static int dataType;
+    int AeroportId;
+    int dataType;
 
-    @Override
-    public int compareTo(TextPair o) {
-        return 0;
-    }
+
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
@@ -28,6 +25,11 @@ public class TextPair implements WritableComparable<TextPair> {
     @Override
     public void readFields(DataInput dataInput) throws IOException {
 
+    }
+
+    @Override
+    public int compareTo(TextPair o) {
+        return 0;
     }
 
 
