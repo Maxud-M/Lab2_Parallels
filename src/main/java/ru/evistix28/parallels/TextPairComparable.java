@@ -21,4 +21,5 @@ public class TextPairComparable implements WritableComparable {
     public void readFields(DataInput dataInput) throws IOException {
 
     }
+
 }
