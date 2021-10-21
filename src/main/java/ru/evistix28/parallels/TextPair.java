@@ -20,7 +20,7 @@ public class TextPair {
 
     public class FirstComparator implements RawComparator {
 
-        
+
         public int compare(TextPairComparable a, TextPairComparable b) {
             return 0;
         }
@@ -30,9 +30,5 @@ public class TextPair {
             return false;
         }
 
-        @Override
-        public int compare(byte[] bytes, int i, int i1, byte[] bytes1, int i2, int i3) {
-            return 0;
-        }
     }
 }
