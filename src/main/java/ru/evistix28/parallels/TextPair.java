@@ -13,8 +13,8 @@ public class TextPair {
 
     public class FirstPartitioner<TextPair, Text> extends Partitioner<TextPair, Text> {
         @Override
-        public int getPartition(TextPair key, Text value, int ) {
-            return 0;
+        public int getPartition(TextPair key, Text value, int numReduceTasks) {
+            return ;
         }
     }
     public class FirstComparator implements RawComparator {
