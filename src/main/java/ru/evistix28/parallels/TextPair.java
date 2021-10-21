@@ -22,5 +22,9 @@ public class TextPair {
             return false;
         }
 
+        @Override
+        public int compare(byte[] bytes, int i, int i1, byte[] bytes1, int i2, int i3) {
+            return 0;
+        }
     }
 }
