@@ -13,7 +13,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
         Job job = Job.getInstance();
-        job.setJarByClass(JoinJob.class);
+        job.setJarByClass(Main.class);
         job.setJobName("JoinJob sort");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, CallsJoinMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, SystemsJoinMapper.class);
