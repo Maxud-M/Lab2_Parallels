@@ -10,13 +10,13 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class TextPair implements WritableComparable {
+public class TextPair implements WritableComparable<TextPair> {
 
     static int AeroportId;
     static int dataType;
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(TextPair o) {
         return 0;
     }
 
@@ -38,10 +38,10 @@ public class TextPair implements WritableComparable {
         }
     }
 
-    public class FirstComparator implements RawComparator {
+    public class FirstComparator implements RawComparator<TextPair> {
 
 
-        public int compare(TextPairComparable a, TextPairComparable b) {
+        public int compare(TextPair a, TextPair b) {
             return a.compareTo(b);
         }
 
@@ -50,5 +50,9 @@ public class TextPair implements WritableComparable {
             return false;
         }
 
+        @Override
+        public int compare(byte[] bytes, int i, int i1, byte[] bytes1, int i2, int i3) {
+            return 0;
+        }
     }
 }
