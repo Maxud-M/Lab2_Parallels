@@ -1,12 +1,14 @@
 package ru.evistix28.parallels;
 
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public class AirPortsJoinMapper extends Mapper {
+public class AirPortsJoinMapper extends Mapper<LongWritable, Text, TextPair, Text> {
     @Override
-    protected void map(Object key, Object value, Context context) throws IOException, InterruptedException {
-        super.map(key, value, context);
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        AirPortsJoinMapper airports = new AirPortsJoinMapper(value);
     }
 }
