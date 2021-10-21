@@ -13,7 +13,7 @@ public class TextPair {
 
     public class FirstPartitioner<TextPair, Text> extends Partitioner<TextPair, Text> {
         @Override
-        public int getPartition(ru.evistix28.parallels.TextPair , Object o2, int i) {
+        public int getPartition(TextPair key, Text value, int ) {
             return 0;
         }
     }
