@@ -14,7 +14,7 @@ public class TextPair {
     public class FirstPartitioner<TextPair, Text> extends Partitioner<TextPair, Text> {
         @Override
         public int getPartition(TextPair key, Text value, int numReduceTasks) {
-            return ;
+            return (key.hashCode() & Integer.MAX_VALUE) % numReduceTasks;
         }
     }
     public class FirstComparator implements RawComparator {
