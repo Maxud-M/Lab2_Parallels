@@ -33,7 +33,7 @@ public class TextPair implements WritableComparable<TextPair> {
 
     @Override
     public int compareTo(TextPair o) {
-        return (aeroportId < o.aeroportId)? ;
+        return (aeroportId < o.aeroportId)? 1: ;
     }
 
 
