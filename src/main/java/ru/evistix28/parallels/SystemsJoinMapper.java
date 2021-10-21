@@ -1,2 +1,6 @@
-package ru.evistix28.parallels;public class SystemsJoinMapper {
+package ru.evistix28.parallels;
+
+import org.apache.hadoop.mapreduce.Mapper;
+
+public class SystemsJoinMapper extends Mapper {
 }

@@ -1,2 +1,6 @@
-package ru.evistix28.parallels;public class JoinReducer {
+package ru.evistix28.parallels;
+
+import org.apache.hadoop.mapreduce.Reducer;
+
+public class JoinReducer extends Reducer {
 }
