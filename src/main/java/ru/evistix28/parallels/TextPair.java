@@ -19,6 +19,7 @@ public class TextPair implements WritableComparable<TextPair> {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
+        
 
     }
 
