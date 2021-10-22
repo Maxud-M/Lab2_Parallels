@@ -29,7 +29,7 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
              numOfValues++;
         }
         averageDelay = sumOfDelay / numOfValues;
-        outValue = new Text(airportName
+        outValue = new Text(airportName.toString()
                 + "\t" + String.valueOf(minTimeOfDelay)
                 + "\t" + String.valueOf(maxTimeOfDelay)
                 + "\t" + String.valueOf(averageDelay));
