@@ -8,13 +8,15 @@ import java.io.*;
 public class AirPortWritable implements Writable {
 
     public AirPortWritable(Text value) {
-        BufferedReader csvReader = new BufferedReader;
+
+
     }
 
 
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
+
     }
 
     @Override
