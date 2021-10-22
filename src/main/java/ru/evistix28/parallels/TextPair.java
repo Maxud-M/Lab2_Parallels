@@ -59,7 +59,7 @@ public class TextPair implements WritableComparable<TextPair> {
 
         @Override
         public int getPartition(TextPair key, Text value, int numReduceTasks) {
-            return (key.hashCode() & Integer.MAX_VALUE) % numReduceTasks;
+            return key.airportId % numReduceTasks;
         }
     }
 
