@@ -13,8 +13,14 @@ import java.io.IOException;
 
 public class TextPair implements WritableComparable<TextPair> {
 
-    static int aeroportId;
-    static int dataType;
+    private int aeroportId;
+    private int dataType;
+
+    public int getKey() {return aeroportId;}
+    public int getDataType() {return dataType;}
+
+
+
 
     public TextPair() {}
 

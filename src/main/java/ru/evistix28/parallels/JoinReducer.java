@@ -16,7 +16,7 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
         int maxTimeOfDelay = Integer.MIN_VALUE;
         int sumOfDelay = 0;
         float averageDelay;
-        int count
+        int numOfValues = 0;
         Text outValue;
         while(iter.hasNext()) {
             Text value = iter.next();
@@ -26,9 +26,14 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
             if(maxTimeOfDelay > flightDelay)
                 maxTimeOfDelay = flightDelay;
              sumOfDelay += flightDelay;
+             numOfValues++;
         }
-
-        outValue = new Text(aeroportName + "\t" + String.valueOf(minTimeOfFlight));
+        averageDelay = sumOfDelay / numOfValues;
+        outValue = new Text(aeroportName
+                + "\t" + String.valueOf(minTimeOfDelay)
+                + "\t" + String.valueOf(maxTimeOfDelay)
+                + "\t" + String.valueOf(averageDelay));
+        Text outKey = new Text(String.valueOf(key.g))
         context.write(new Text(String.valueOf(key.aeroportId)), outValue);
 
         }
