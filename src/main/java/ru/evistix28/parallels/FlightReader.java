@@ -14,6 +14,9 @@ public class FlightReader {
     public FlightReader(String value) {
         String[] data = value.split(Constants.DATA_SEPARATOR);
         airportID = Integer.parseInt(data[DEST_AIRPORT_ID_POS]);
-        flightDelay = Float.parseFloat(data[FLIGHT_DELAY_POS]);
+        if(data[FLIGHT_DELAY_POS] != Constants.EMPTY_STRING)
+            flightDelay = Float.parseFloat(data[FLIGHT_DELAY_POS]);
+        else
+            flightDelay = Constants.ZERO_FLOAT;
     }
 }
