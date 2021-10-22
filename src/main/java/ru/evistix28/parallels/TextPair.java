@@ -13,10 +13,10 @@ import java.io.IOException;
 
 public class TextPair implements WritableComparable<TextPair> {
 
-    int aeroportId;
-    int dataType;
+    Text aeroportId;
+    Text dataType;
 
-    public TextPair(int aeroportId, int dataType) {
+    public TextPair(Text aeroportId, Text dataType) {
         this.aeroportId = aeroportId;
         this.dataType = dataType;
     }
@@ -25,15 +25,15 @@ public class TextPair implements WritableComparable<TextPair> {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        dataOutput.writeInt(aeroportId);
-        dataOutput.writeInt(dataType);
+        dataOutput.writeInt(Integer.parseInt(aeroportId.toString()));
+        dataOutput.writeInt(Integer.parseInt(dataType.toString()));
 
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-        aeroportId = dataInput.readInt();
-        dataType = dataInput.readInt();
+        aeroportId = new Text(String.valueOf(dataInput.readInt()));
+        dataType = new Text(String.valueOf(dataInput.readInt()));
 
     }
 
