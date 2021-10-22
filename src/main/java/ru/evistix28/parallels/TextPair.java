@@ -47,6 +47,8 @@ public class TextPair implements WritableComparable<TextPair> {
 
     @Override
     public int compareTo(TextPair o) {
+        if(airportId == o.airportId)
+            return dataType - o.dataType;
         return airportId - o.airportId;
     }
 
