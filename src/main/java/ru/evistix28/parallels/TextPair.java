@@ -56,7 +56,7 @@ public class TextPair implements WritableComparable<TextPair> {
         }
     }
 
-    public class FirstComparator extends WritableComparator {
+    public static class FirstComparator extends WritableComparator {
 
         public FirstComparator(){}
 
