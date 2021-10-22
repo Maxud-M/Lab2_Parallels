@@ -12,7 +12,7 @@ public class AirportsJoinMapper extends Mapper<LongWritable, Text, TextPair, Tex
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         if(key.get() != Constants.FIRST_STR_IN_DATA) {
             AirportReader airportReader = new AirportReader(value.toString());
-            TextPair keyOut = new TextPair(airportReader.getKey(), Constants.AEROPORT_DATA_TYPE);
+            TextPair keyOut = new TextPair(airportReader.getKey(), Constants.AIRPORT_DATA_TYPE);
             Text valueOut = new Text(airportReader.getAirportName());
             context.write(keyOut, valueOut);
         }
