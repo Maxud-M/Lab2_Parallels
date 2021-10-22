@@ -9,7 +9,11 @@ import java.io.IOException;
 public class AirPortsJoinMapper extends Mapper<LongWritable, Text, TextPair, Text> {
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        TextPair keys = new TextPair();
-        AirPortsJoinMapper airports = new AirPortsJoinMapper(value);
+        String val = value.toString();
+        String[] data = val.split("\n");
+        for(int i = 1; i < data.length; ++i) {
+            String[] raw = data[i].split("\t");
+            context.write(new TextPair(Integer.parseInt(raw[0]), 0), new Text(raw[1]));
+        }
     }
 }
