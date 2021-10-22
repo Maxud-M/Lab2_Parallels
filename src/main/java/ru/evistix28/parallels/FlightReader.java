@@ -6,14 +6,14 @@ public class FlightReader {
     public static final int FLIGHT_DELAY_POS = 18;
 
     private final int airportID;
-    private final int flightDelay;
+    private final float flightDelay;
 
     public int getKey() {return airportID;}
-    public int getFlightDelay() {return flightDelay;}
+    public float getFlightDelay() {return flightDelay;}
 
     public FlightReader(String value) {
         String[] data = value.split(Constants.DATA_SEPARATOR);
         airportID = Integer.parseInt(data[DEST_AIRPORT_ID_POS]);
-        flightDelay = Integer.parseInt(data[FLIGHT_DELAY_POS]);
+        flightDelay = Float.parseFloat(data[FLIGHT_DELAY_POS]);
     }
 }
