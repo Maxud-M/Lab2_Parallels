@@ -74,7 +74,7 @@ public class TextPair implements WritableComparable<TextPair> {
 
         public FirstComparator(){super(TextPair.class, true);}
 
-
+        @Override
         public int compare(WritableComparable a, WritableComparable b) {
             return ((TextPair) a).airportId - ((TextPair) b).airportId;
         }
