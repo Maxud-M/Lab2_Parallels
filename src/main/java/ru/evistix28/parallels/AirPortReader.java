@@ -5,7 +5,7 @@ public class AirPortReader {
     public static final int AIRPORT_NAME_POS = 1;
 
     private int aeroportID;
-    private
+    private Text aer
 
     public AirPortReader()
 }
