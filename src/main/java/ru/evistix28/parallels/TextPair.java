@@ -51,12 +51,6 @@ public class TextPair implements WritableComparable<TextPair> {
         return airportId - o.airportId;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        TextPair tp = (TextPair) o;
-        return tp.airportId == airportId;
-    }
-
 
     public static class FirstPartitioner extends Partitioner<TextPair, Text>{
 

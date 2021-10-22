@@ -1,7 +1,6 @@
 package ru.evistix28.parallels;
 
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
 
 public class AirportReader {
     public static final int DEST_AIRPORT_ID_POS = 0;
