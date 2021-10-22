@@ -13,7 +13,7 @@ public class AirportsJoinMapper extends Mapper<LongWritable, Text, TextPair, Tex
         if(key.get() != Constants.FIRST_STR_IN_DATA) {
             AirportReader airportReader = new AirportReader(value.toString());
             TextPair keyOut = new TextPair(airportReader.getKey(), Constants.AIRPORT_DATA_TYPE);
-            Text valueOut = new Text(airportReader.getAirportName());
+            Text valueOut = airportReader.getAirportName();
             context.write(keyOut, valueOut);
         }
     }
