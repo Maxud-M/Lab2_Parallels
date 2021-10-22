@@ -12,14 +12,14 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
             IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
         Text airportName = new Text(iter.next());
+        if(!iter.hasNext()) {
+            return;
+        }
         float minTimeOfDelay = Integer.MAX_VALUE;
         float maxTimeOfDelay = Integer.MIN_VALUE;
         float sumOfDelay = 0;
         float averageDelay;
         int numOfValues = 0;
-        if(!iter.hasNext()) {
-            return;
-        }
         while(iter.hasNext()) {
             Text value = iter.next()    ;
             float flightDelay = Float.parseFloat(value.toString());
