@@ -7,10 +7,6 @@ import java.io.*;
 
 public class AirPortWritable implements Writable {
 
-    public AirPortWritable(Text value) {
-
-
-    }
 
 
 
