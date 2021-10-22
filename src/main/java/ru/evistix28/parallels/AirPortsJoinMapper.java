@@ -13,6 +13,7 @@ public class AirPortsJoinMapper extends Mapper<LongWritable, Text, TextPair, Tex
         String[] data = val.split("\n");
         for(int i = 1; i < data.length; ++i) {
             String[] raw = data[i].split("\t");
+            System.out.println(raw[0] + "\t" + raw[1]);
             context.write(new TextPair(Integer.parseInt(raw[0]), 0), new Text(raw[1]));
         }
     }

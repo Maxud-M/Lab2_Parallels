@@ -20,7 +20,7 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
                 minTimeOfFlight = Integer.parseInt(flight.toString());
             }
         }
-        outValue = new Text(String.valueOf(minTimeOfFlight));
+        outValue = new Text(aeroportName + "\t" + String.valueOf(minTimeOfFlight));
         context.write(new Text(String.valueOf(key.aeroportId)), outValue);
 
         }
