@@ -5,7 +5,6 @@ public class FlightReader {
     public static final int DEST_AIRPORT_ID_POS = 14;
     public static final int FLIGHT_DELAY_POS = 18;
 
-
     private final int airportID;
     private final int flightDelay;
 
