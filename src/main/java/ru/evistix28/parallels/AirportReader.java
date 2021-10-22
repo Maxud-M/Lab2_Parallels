@@ -19,8 +19,8 @@ public class AirportReader {
 
     public AirportReader(String value) {
         String[] dataPair = value.split(Constants.DATA_SEPARATOR, LIMIT_FOR_SPLIT);
-        airportID = Integer.parseInt(dataPair[0].replaceAll(Constants.QUOTES, FlightReader.EMPTY_STRING));
-        airportName = new Text(dataPair[1].replaceAll(Constants.QUOTES, FlightReader.EMPTY_STRING));
+        airportID = Integer.parseInt(dataPair[DEST_AIRPORT_ID_POS].replaceAll(Constants.QUOTES, Constants.EMPTY_STRING));
+        airportName = new Text(dataPair[AIRPORT_NAME_POS].replaceAll(Constants.QUOTES, Constants.EMPTY_STRING));
     }
 
 

@@ -33,8 +33,8 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
                 + "\t" + String.valueOf(minTimeOfDelay)
                 + "\t" + String.valueOf(maxTimeOfDelay)
                 + "\t" + String.valueOf(averageDelay));
-        Text outKey = new Text(String.valueOf(key.g))
-        context.write(new Text(String.valueOf(key.aeroportId)), outValue);
+        Text outKey = new Text(String.valueOf(key.getKey()));
+        context.write(outKey, outValue);
 
         }
     }
