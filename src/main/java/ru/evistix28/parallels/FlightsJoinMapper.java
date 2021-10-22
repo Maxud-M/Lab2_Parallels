@@ -12,10 +12,10 @@ public class FlightsJoinMapper extends Mapper<LongWritable, Text, TextPair, Text
         String val = value.toString();
         String[] data = val.split("\n");
         for(int i = 1; i < data.length; ++i) {
-            System.out.println("OOKSPFASJFKJHASJFHASJFHKJSAHFKJDHFKJDHFKJDHFKJDHFKJHDKFJHDKJFHDKJFHKJD");
             String[] raw = data[i].split(",");
-            System.out.println(raw[14] + "\t" + raw[18]);
-            context.write(new TextPair(Integer.parseInt(raw[14]), 1), new Text(raw[18]));
+            TextPair keyOut = new TextPair(Integer.parseInt(raw[14].replaceAll("\"", "")), 1);
+            Text valueOut = new Text(raw[18].replaceAll("\"", ""));
+            context.write(keyOut, valueOut);
         }
     }
 
