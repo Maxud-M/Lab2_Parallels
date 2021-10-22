@@ -14,7 +14,8 @@ public class FlightsJoinMapper extends Mapper<LongWritable, Text, TextPair, Text
             FlightReader flightReader = new FlightReader(value.toString());
             TextPair keyOut = new TextPair(flightReader.getKey(), Constants.FLIGHT_DATA_TYPE);
             Text valueOut = new Text(String.valueOf(flightReader.getFlightDelay()));
-            context.write(keyOut, valueOut);
+            if(flightReader.getFlightDelay() != 0)
+                context.write(keyOut, valueOut);
         }
     }
 }
