@@ -15,8 +15,8 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
         if(!iter.hasNext()) {
             return;
         }
-        float minTimeOfDelay = Integer.MAX_VALUE;
-        float maxTimeOfDelay = Integer.MIN_VALUE;
+        float minTimeOfDelay = Float.MAX_VALUE;
+        float maxTimeOfDelay = Float.MIN_VALUE;
         float sumOfDelay = 0;
         float averageDelay;
         int numOfValues = 0;
