@@ -6,7 +6,7 @@ import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
 public class AirportReader {
     public static final int DEST_AIRPORT_ID_POS = 0;
     public static final int AIRPORT_NAME_POS = 1;
-    public static final int LIMIT_FOR_SPLIT = 1;
+    public static final int LIMIT_FOR_SPLIT = 2;
 
     private final int airportID;
     private final Text airportName;
