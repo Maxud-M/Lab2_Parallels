@@ -72,9 +72,8 @@ public class TextPair implements WritableComparable<TextPair> {
 
     public static class FirstComparator extends WritableComparator {
 
-        private static final Object TextPair = ;
 
-        public FirstComparator(){super(TextPair, true)}
+        public FirstComparator(){super(new TextPair(), true);}
 
 
         public int compare(WritableComparable a, WritableComparable b) {
