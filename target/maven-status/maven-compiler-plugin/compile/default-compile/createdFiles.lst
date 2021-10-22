@@ -1,9 +1,0 @@
-ru/evistix28/parallels/TextPair$FirstComparator.class
-ru/evistix28/parallels/FlightsJoinMapper.class
-ru/evistix28/parallels/JoinReducer.class
-ru/evistix28/parallels/AirPortsJoinMapper.class
-ru/evistix28/parallels/AirPortWritable.class
-ru/evistix28/parallels/TextPair.class
-ru/evistix28/parallels/TextPair$FirstPartitioner.class
-ru/evistix28/parallels/JoinJob.class
-ru/evistix28/parallels/FlightWritable.class
