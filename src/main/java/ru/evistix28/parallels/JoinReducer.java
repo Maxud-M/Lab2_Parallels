@@ -11,6 +11,7 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
     protected void reduce(TextPair key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
+        float f = Float.parseFloat(iter.next().toString());
         Text airportName = new Text(iter.next());
         float minTimeOfDelay = Integer.MAX_VALUE;
         float maxTimeOfDelay = Integer.MIN_VALUE;
