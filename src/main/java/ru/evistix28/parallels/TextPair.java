@@ -60,7 +60,9 @@ public class TextPair implements WritableComparable<TextPair> {
 
     public static class FirstPartitioner extends Partitioner<TextPair, Text>{
 
-        public FirstPartitioner(){}
+        public FirstPartitioner(){
+            super();
+        }
 
 
         @Override
