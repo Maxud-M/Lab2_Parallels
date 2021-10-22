@@ -58,6 +58,8 @@ public class TextPair implements WritableComparable<TextPair> {
 
     public class FirstComparator extends WritableComparator {
 
+        public FirstComparator(){}
+
 
         public int compare(TextPair a, TextPair b) {
             return a.compareTo(b);
