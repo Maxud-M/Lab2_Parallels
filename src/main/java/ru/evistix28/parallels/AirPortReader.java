@@ -1,2 +1,4 @@
-package ru.evistix28.parallels;public class AirPortReader {
+package ru.evistix28.parallels;
+
+public class AirPortReader {
 }
