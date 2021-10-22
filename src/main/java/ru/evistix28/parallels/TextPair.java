@@ -61,7 +61,6 @@ public class TextPair implements WritableComparable<TextPair> {
     public static class FirstPartitioner extends Partitioner<TextPair, Text>{
 
         public FirstPartitioner(){
-            super();
         }
 
 
@@ -73,7 +72,9 @@ public class TextPair implements WritableComparable<TextPair> {
 
     public static class FirstComparator extends WritableComparator {
 
-        public FirstComparator(){}
+        private static final Object TextPair = ;
+
+        public FirstComparator(){super(TextPair, true)}
 
 
         public int compare(WritableComparable a, WritableComparable b) {
