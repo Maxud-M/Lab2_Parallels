@@ -13,8 +13,8 @@ import java.io.IOException;
 
 public class TextPair implements WritableComparable<TextPair> {
 
-    int aeroportId;
-    int dataType;
+    static int aeroportId;
+    static int dataType;
 
     public TextPair() {}
 
@@ -74,14 +74,7 @@ public class TextPair implements WritableComparable<TextPair> {
             return a.compareTo(b);
         }
 
-        /*@Override
-        public boolean equals(Object obj) {
-            if (obj instanceof TextPair) {
-                TextPair tp = (TextPair) obj;
-                return aeroportId == tp.aeroportId && dataType == tp.dataType;
-            }
-            return false;
-        }*/
+
 
     }
 }
