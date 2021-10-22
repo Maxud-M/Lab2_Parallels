@@ -11,7 +11,7 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
     protected void reduce(TextPair key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
-        Text airportName = new Text(iter.next());
+        String airportName = iter.next().toString();
         if(!iter.hasNext()) {
             return;
         }
@@ -31,7 +31,7 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
              numOfValues++;
         }
         averageDelay = sumOfDelay / numOfValues;
-        Text outValue = new Text(airportName.toString()
+        Text outValue = new Text(airportName
                 + "\t" + String.valueOf(minTimeOfDelay)
                 + "\t" + String.valueOf(maxTimeOfDelay)
                 + "\t" + String.valueOf(averageDelay));
