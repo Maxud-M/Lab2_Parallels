@@ -44,6 +44,15 @@ public class TextPair implements WritableComparable<TextPair> {
         return aeroportId - o.aeroportId;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof TextPair) {
+            TextPair tp = (TextPair) o;
+            return aeroportId == tp.aeroportId && dataType == tp.dataType;
+        }
+        return false;
+    }
+
 
     public static class FirstPartitioner extends Partitioner<TextPair, Text>{
 
@@ -56,7 +65,7 @@ public class TextPair implements WritableComparable<TextPair> {
         }
     }
 
-    public class FirstComparator extends WritableComparator {
+    public static class FirstComparator extends WritableComparator {
 
         public FirstComparator(){}
 
@@ -65,14 +74,14 @@ public class TextPair implements WritableComparable<TextPair> {
             return a.compareTo(b);
         }
 
-        @Override
+        /*@Override
         public boolean equals(Object obj) {
             if (obj instanceof TextPair) {
                 TextPair tp = (TextPair) obj;
                 return aeroportId == tp.aeroportId && dataType == tp.dataType;
             }
             return false;
-        }
+        }*/
 
     }
 }
