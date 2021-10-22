@@ -17,6 +17,9 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
         float sumOfDelay = 0;
         float averageDelay;
         int numOfValues = 0;
+        if(!iter.hasNext()) {
+            return;
+        }
         while(iter.hasNext()) {
             Text value = iter.next()    ;
             float flightDelay = Float.parseFloat(value.toString());
