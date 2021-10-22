@@ -62,8 +62,7 @@ public class TextPair implements WritableComparable<TextPair> {
 
     public static class FirstPartitioner extends Partitioner<TextPair, Text>{
 
-        public FirstPartitioner(){
-        }
+        public FirstPartitioner(){}
 
 
         @Override
@@ -83,8 +82,5 @@ public class TextPair implements WritableComparable<TextPair> {
             b = (TextPair) b;
             return a.compareTo(b);
         }
-
-
-
     }
 }
