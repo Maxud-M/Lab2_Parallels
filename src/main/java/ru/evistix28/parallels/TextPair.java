@@ -1,7 +1,7 @@
 package ru.evistix28.parallels;
 
-import com.sun.xml.internal.ws.api.message.Message;
-import org.apache.avro.Protocol;
+
+
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.WritableComparator;
