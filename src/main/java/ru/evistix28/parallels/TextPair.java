@@ -13,10 +13,10 @@ import java.io.IOException;
 
 public class TextPair implements WritableComparable<TextPair> {
 
-    private int aeroportId;
+    private int airportId;
     private int dataType;
 
-    public int getKey() {return aeroportId;}
+    public int getKey() {return airportId;}
     public int getDataType() {return dataType;}
 
 
@@ -24,8 +24,8 @@ public class TextPair implements WritableComparable<TextPair> {
 
     public TextPair() {}
 
-    public TextPair(int aeroportId, int dataType) {
-        this.aeroportId = aeroportId;
+    public TextPair(int airportId, int dataType) {
+        this.airportId = airportId;
         this.dataType = dataType;
     }
 
@@ -33,28 +33,28 @@ public class TextPair implements WritableComparable<TextPair> {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        dataOutput.writeInt(aeroportId);
+        dataOutput.writeInt(airportId);
         dataOutput.writeInt(dataType);
 
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-        aeroportId = dataInput.readInt();
+        airportId = dataInput.readInt();
         dataType = dataInput.readInt();
 
     }
 
     @Override
     public int compareTo(TextPair o) {
-        return aeroportId - o.aeroportId;
+        return airportId - o.airportId;
     }
 
     @Override
     public boolean equals(Object o) {
         if (o instanceof TextPair) {
             TextPair tp = (TextPair) o;
-            return aeroportId == tp.aeroportId && dataType == tp.dataType;
+            return airportId == tp.airportId && dataType == tp.dataType;
         }
         return false;
     }
@@ -76,7 +76,9 @@ public class TextPair implements WritableComparable<TextPair> {
         public FirstComparator(){}
 
 
-        public int compare(TextPair a, TextPair b) {
+        public int compare(WritableComparable a, WritableComparable b) {
+            a = (TextPair) a;
+            b = (TextPair) b;
             return a.compareTo(b);
         }
 
