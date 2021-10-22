@@ -1,10 +1,8 @@
 package ru.evistix28.parallels;
 
-import org.apache.hadoop.io.RawComparator;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.WritableComparator;
-import org.apache.hadoop.io.file.tfile.RawComparable;
 import org.apache.hadoop.mapreduce.Partitioner;
 
 import java.io.DataInput;
