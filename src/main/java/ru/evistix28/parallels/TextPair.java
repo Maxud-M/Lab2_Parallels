@@ -17,7 +17,6 @@ public class TextPair implements WritableComparable<TextPair> {
     private int dataType;
 
     public int getKey() {return airportId;}
-    public int getDataType() {return dataType;}
 
 
 
@@ -77,9 +76,7 @@ public class TextPair implements WritableComparable<TextPair> {
 
 
         public int compare(WritableComparable a, WritableComparable b) {
-            a = (TextPair) a;
-            b = (TextPair) b;
-            return a.compareTo(b);
+            return ((TextPair) a).airportId - ((TextPair) b).airportId;
         }
     }
 }
