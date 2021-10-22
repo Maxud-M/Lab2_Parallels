@@ -45,7 +45,7 @@ public class TextPair implements WritableComparable<TextPair> {
     }
 
 
-    public class FirstPartitioner extends Partitioner<TextPair, Text>{
+    public static class FirstPartitioner extends Partitioner<TextPair, Text>{
 
         public FirstPartitioner(){}
 
