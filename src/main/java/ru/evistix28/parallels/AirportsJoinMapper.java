@@ -11,8 +11,9 @@ public class AirportsJoinMapper extends Mapper<LongWritable, Text, TextPair, Tex
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        if(key == )
-        AirportReader airportReader = new AirportReader(value.toString());
-        TextPair keyOut =
+        if(key.get() != 0) {
+            AirportReader airportReader = new AirportReader(value.toString());
+            TextPair keyOut = new TextPair(airportReader.getKey(), 1)
+        }
     }
 }
