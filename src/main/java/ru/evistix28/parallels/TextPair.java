@@ -16,6 +16,8 @@ public class TextPair implements WritableComparable<TextPair> {
     int aeroportId;
     int dataType;
 
+    public TextPair() {}
+
     public TextPair(int aeroportId, int dataType) {
         this.aeroportId = aeroportId;
         this.dataType = dataType;
