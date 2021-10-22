@@ -4,15 +4,17 @@ public class FlightReader {
 
     public static final int DEST_AIRPORT_ID_POS = 14;
     public static final int FLIGHT_DELAY_POS = 18;
-    public static final String EMPTY_STRING = "";
 
 
     private final int airportID;
     private final int flightDelay;
 
+    public int getKey() {return airportID;}
+    public int getFlightDelay() {return flightDelay;}
+
     public FlightReader(String value) {
-        String[] data = value.split(AirportReader.DATA_SEPARATOR);
-        airportID = Integer.parseInt(data[DEST_AIRPORT_ID_POS].replaceAll(AirportReader.QUOTES, EMPTY_STRING));
-        flightDelay = Integer.parseInt()
+        String[] data = value.split(Constants.DATA_SEPARATOR);
+        airportID = Integer.parseInt(data[DEST_AIRPORT_ID_POS].replaceAll(Constants.QUOTES, Constants.EMPTY_STRING));
+        flightDelay = Integer.parseInt(data[FLIGHT_DELAY_POS].replaceAll(Constants.QUOTES, Constants.EMPTY_STRING));
     }
 }

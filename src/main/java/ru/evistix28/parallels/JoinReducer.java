@@ -14,15 +14,20 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
         Text aeroportName = new Text(iter.next());
         int minTimeOfDelay = Integer.MAX_VALUE;
         int maxTimeOfDelay = Integer.MIN_VALUE;
-        int sumOfDelay;
-
+        int sumOfDelay = 0;
+        float averageDelay;
+        int count
         Text outValue;
         while(iter.hasNext()) {
-            Text flight = iter.next();
-            if(minTimeOfFlight < Integer.parseInt(flight.toString())) {
-                minTimeOfFlight = Integer.parseInt(flight.toString());
-            }
+            Text value = iter.next();
+            int flightDelay = Integer.parseInt(value.toString());
+            if(minTimeOfDelay < flightDelay)
+                minTimeOfDelay = flightDelay;
+            if(maxTimeOfDelay > flightDelay)
+                maxTimeOfDelay = flightDelay;
+             sumOfDelay += flightDelay;
         }
+
         outValue = new Text(aeroportName + "\t" + String.valueOf(minTimeOfFlight));
         context.write(new Text(String.valueOf(key.aeroportId)), outValue);
 
